@@ -67,35 +67,6 @@ model_name1 = "gemini-pro-vision"
 
 model1 = genai.GenerativeModel(model_name=model_name1)
 
-
-# def open_image(file):
-#     image_data = file.read()
-#     image_array = cv2.imdecode(np.frombuffer(image_data, np.uint8), cv2.IMREAD_COLOR)
-#     return image_array
-
-# def chat_image(request):
-#     if request.method == "POST":
-#         form = GeminiProVisionForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             input_text = form.cleaned_data['input_text']
-#             uploaded_image = request.FILES['image']
-
-#             # Opening the image using OpenCV
-#             image_array = open_image(uploaded_image)
-
-#             if input_text != "":
-#                 response = model1.generate_content([input_text, image_array])
-#             else:
-#                 response = model1.generate_content(image_array)
-
-#             response = response.text
-
-#             return render(request, 'result.html', {'response': response})
-#     else:
-#         form = GeminiProVisionForm()
-
-#     return render(request, 'gemini.html', {'form': form})
-
         
 def open_image(file):
     image_data = file.read()
