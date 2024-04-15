@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header {
+            color: #343a40;
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto; 
+            max-width: 600px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .textbox {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .chat-container {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            margin: 10px;
+            max-width: 300px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Generative AI Chatbot</h1>
+
+    <div class="container">
+        <div class="textbox">
+            <h2>Gemini Pro</h2>
+            <p>Gemini Pro is a powerful chat application designed to provide seamless communication.</p>
+            <h2>Gemini Pro Vision</h2>
+            <p>Gemini Pro Vision is an advanced feature that allows the application to process and analyze images.</p>
+        </div>
+
+        <div class="chat-container">
+            <p>Select the Chat Option you want to interact with:</p>
+            <form action="{% url 'chat_text' %}" method="get">
+                <button type="submit">Chat with Text</button>
+            </form>
+            
+            <form action="{% url 'chat_image' %}" method="get">
+                <button type="submit">Chat with Image</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

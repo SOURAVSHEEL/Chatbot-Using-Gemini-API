@@ -1,0 +1,7 @@
+Django
+python-dotenv
+google-generativeai
+Pillow
+Markdown2
+opencv-python
+numpy
